@@ -37,7 +37,7 @@
     // airbnb config configures stricter rules, change assert to "either".
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/718
     "jsx-a11y/label-has-associated-control": [
-      2,
+      0,
       {
         "assert": "either"
       }
@@ -45,7 +45,7 @@
     // Since we do not use prop-types
     "react/require-default-props": 0,
     // Use semicolon as member delimiter for interfaces and type
-    "@typescript-eslint/member-delimiter-style": 2,
+    "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/semi": 0,
     "react/jsx-props-no-spreading": [
       2,
@@ -63,13 +63,13 @@
       }
     ],
     "quotes": [
-      2,
+      0,
       "single"
     ],
     "semi": [
-      2,
+      0,
       "never"
     ],
-    "eslint-comments/no-unused-disable": 2
+    "eslint-comments/no-unused-disable": 0
   }
 }
