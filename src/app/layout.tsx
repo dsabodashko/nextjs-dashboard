@@ -23,11 +23,44 @@ export default async function RootLayout({
 
   return (
     <html lang="en" data-bs-theme={getTheme()}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.USER_DATA = {
+              "id": "374494",
+              "email": "yuriy.khoma@reflecto.ai",
+              "email_verified": true,
+              "first_name": "Yuriy",
+              "last_name": "Khoma",
+              "full_name": "Yuriy Khoma",
+              };\n
+              // For demonstration, let's log the USER_DATA to the console\n
+              console.log(window.USER_DATA);
+            `,
+          }}
+        />
+      </head>
       <body>
         <ProgressBar />
         <DictionaryProvider dictionary={dictionary}>
           {children}
         </DictionaryProvider>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://reflectoadmin.s3.amazonaws.com/client-widget/index.css"
+        />
+        <script
+          type="module"
+          src="https://reflectoadmin.s3.amazonaws.com/client-widget/index.js"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.addEventListener('DOMContentLoaded', function() {window.ChatAi.init({projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29"});});`
+            ,
+          }}
+        ></script>
       </body>
     </html>
   )
