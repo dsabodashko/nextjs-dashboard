@@ -49,11 +49,11 @@ export default async function RootLayout({
         <link
           rel="stylesheet"
           type="text/css"
-          href="https://reflectoadmin.s3.amazonaws.com/client-widget/index.css"
+          href="https://reflectoadmin-dev.s3.amazonaws.com/client-widget/develop/index.css"
         />
         <script
           type="module"
-          src="https://reflectoadmin.s3.amazonaws.com/client-widget/index.js"
+          src="https://reflectoadmin.s3.amazonaws.com/client-widget/develop/index.js"
         ></script>
         <script
           dangerouslySetInnerHTML={{
