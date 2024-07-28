@@ -51,12 +51,12 @@ export default async function RootLayout({
         <link
           rel="stylesheet"
           type="text/css"
-          href="https://reflectoadmin-dev.s3.amazonaws.com/client-widget/develop/index.css"
+          href="https://reflectoadmin.s3.amazonaws.com/client-widget/index.css"
         />
         <script
           defer
           type="module"
-          src="https://reflectoadmin-dev.s3.amazonaws.com/client-widget/develop/index.js"
+          src="https://reflectoadmin.s3.amazonaws.com/client-widget/index.js"
         ></script>
         <script
           defer
