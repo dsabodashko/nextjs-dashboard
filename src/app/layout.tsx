@@ -38,9 +38,9 @@ export default async function RootLayout({
               // For demonstration, let's log the USER_DATA to the console\n
               console.log(window.USER_DATA);
 
-              if (window.ChatAi && window.ChatAi.context) {
-                Object.assign(window.ChatAi.context, { projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29" });
-              } else { console.error('window.ChatAi or window.ChatAi.context is undefined'); }
+              if (window.ChatAi) {
+                Object.assign(window.ChatAi, {context: {projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29" }});
+              } else {console.error('window.ChatAi or window.ChatAi.context is undefined');}
             `,
           }}
         />
