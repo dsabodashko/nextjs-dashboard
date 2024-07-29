@@ -38,7 +38,9 @@ export default async function RootLayout({
               // For demonstration, let's log the USER_DATA to the console\n
               console.log(window.USER_DATA);
 
-              Object.assign(window.ChatAi.context, {projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29"});
+              if (window.ChatAi && window.ChatAi.context) {
+                Object.assign(window.ChatAi.context, { projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29" });
+              } else { console.error('window.ChatAi or window.ChatAi.context is undefined'); }
             `,
           }}
         />
@@ -51,12 +53,12 @@ export default async function RootLayout({
         <link
           rel="stylesheet"
           type="text/css"
-          href="https://reflectoadmin.s3.amazonaws.com/client-widget/index.css"
+          href="https://reflectoadmin.s3.amazonaws.com/client-widget/develop/index.css"
         />
         <script
           defer
           type="module"
-          src="https://reflectoadmin.s3.amazonaws.com/client-widget/index.js"
+          src="https://reflectoadmin.s3.amazonaws.com/client-widget/develop/index.js"
         ></script>
         <script
           defer
