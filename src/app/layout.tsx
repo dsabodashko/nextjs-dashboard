@@ -24,6 +24,12 @@ export default async function RootLayout({
   return (
     <html lang="en" data-bs-theme={getTheme()}>
       <head>
+      <script
+          dangerouslySetInnerHTML={{
+            __html: `window.addEventListener('DOMContentLoaded', function() {window.ChatAi.init({projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29"});});`
+            ,
+          }}
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -50,13 +56,6 @@ export default async function RootLayout({
         <DictionaryProvider dictionary={dictionary}>
           {children}
         </DictionaryProvider>
-        <script
-          defer
-          dangerouslySetInnerHTML={{
-            __html: `window.addEventListener('DOMContentLoaded', function() {window.ChatAi.init({projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29"});});`
-            ,
-          }}
-        ></script>
         <link
           rel="stylesheet"
           type="text/css"
