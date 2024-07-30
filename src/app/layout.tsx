@@ -50,22 +50,21 @@ export default async function RootLayout({
         <DictionaryProvider dictionary={dictionary}>
           {children}
         </DictionaryProvider>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://reflectoadmin.s3.amazonaws.com/client-widget/develop/index.css"
-        />
-        <script
-          defer
-          type="module"
-          src="https://reflectoadmin.s3.amazonaws.com/client-widget/develop/index.js"
-        ></script>
         <script
           defer
           dangerouslySetInnerHTML={{
             __html: `window.addEventListener('DOMContentLoaded', function() {window.ChatAi.init({projectId: "8b3949ec-5ddc-4967-aebb-6e6caf960a29"});});`
             ,
           }}
+        ></script>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://reflectoadmin.s3.amazonaws.com/client-widget/develop/index.css"
+        />
+        <script
+          type="module"
+          src="https://reflectoadmin.s3.amazonaws.com/client-widget/develop/index.js"
         ></script>
       </body>
     </html>
